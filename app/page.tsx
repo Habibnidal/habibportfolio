@@ -306,7 +306,7 @@ export default function Home() {
           <div className="portrait-card">
             <div className="portrait-glow" />
             <Image
-              src="/profile.png"
+              src="/profile1.png"
               alt="Habib Nidal working on software"
               fill
               priority
