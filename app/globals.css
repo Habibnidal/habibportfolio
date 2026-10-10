@@ -14,6 +14,7 @@ button { cursor: pointer; }
 .nav-wrap { height: 78px; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; position: absolute; z-index: 10; width: 100%; top: 0; color: var(--teal); }
 .brand, .footer-brand { display: flex; align-items: center; gap: 12px; letter-spacing: -.02em; }
 .brand span, .footer-brand > span { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--gold); color: var(--gold); font-size: 11px; letter-spacing: .08em; }
+.brand-logo-img { width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--gold); object-fit: cover; display: block; }
 .brand strong { font-size: 15px; font-weight: 700; }
 .nav-links { display: flex; align-items: center; gap: 27px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
 .nav-links a:not(.nav-cta) { opacity: .68; transition: color .25s, opacity .25s; }

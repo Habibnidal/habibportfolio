@@ -283,7 +283,17 @@ export default function Home() {
     <main className={motionOn ? 'site-shell' : 'site-shell reduced-motion'}>
       <div className="grain" aria-hidden="true" />
       <header className="nav-wrap">
-        <a href="#top" className="brand" aria-label="Habib Nidal home"><span>HN</span><strong>Habib Nidal</strong></a>
+        <a href="#top" className="brand" aria-label="Habib Nidal home">
+          <Image
+            src="/hn-icon.png"
+            alt="Habib Nidal logo"
+            width={34}
+            height={34}
+            className="brand-logo-img"
+            priority
+          />
+          <strong>Habib Nidal</strong>
+        </a>
         <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
           {['About', 'Services', 'Projects', 'Experience', 'Skills'].map((item) => <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>)}
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -486,7 +496,19 @@ export default function Home() {
 
       <section className="contact-section" id="contact"><div className="contact-copy reveal"><p className="section-label">07 / Contact</p><h2>Have an idea?<br /><em>Let&apos;s build it.</em></h2><p>Tell me what you&apos;re trying to build, automate, or improve. I&apos;ll help turn the idea into a practical digital solution.</p><div className="contact-links"><a href="mailto:habibnidal2003@gmail.com"><Mail size={16} />habibnidal2003@gmail.com</a><a href="https://www.linkedin.com/in/habibnidal" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span>LinkedIn</a><a href="https://github.com/habibnidal" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span>GitHub</a><a href="https://wa.me/917306020083" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span>WhatsApp</a></div></div><form className="contact-form reveal delay-1" onSubmit={handleContactSubmit}><label>Name<input required placeholder="Your name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} disabled={isSubmitting} /></label><label>Email<input required type="email" placeholder="you@company.com" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} disabled={isSubmitting} /></label><label>What do you need?<select required value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })} disabled={isSubmitting}><option value="" disabled>Select a service</option><option value="AI Application">AI Application</option><option value="Automation">Automation</option><option value="Full-Stack Application">Full-Stack Application</option><option value="Business Application">Business Application</option><option value="Zoho Development">Zoho Development</option></select></label><label>Brief description<textarea rows={4} placeholder="Tell me a little about the problem..." value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} disabled={isSubmitting} /></label>{submitStatus === 'success' && (<div className="form-status-msg success"><CheckCircle2 size={18} className="status-icon" /><span>{statusMessage}</span></div>)}{submitStatus === 'error' && (<div className="form-status-msg error"><AlertCircle size={18} className="status-icon" /><span>{statusMessage}</span></div>)}<button className="button button-gold" type="submit" disabled={isSubmitting} style={{ opacity: isSubmitting ? 0.75 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>{isSubmitting ? (<>Sending... <Loader2 size={16} className="animate-spin" /></>) : (<>Submit Inquiry <ArrowUpRight size={17} /></>)}</button></form></section>
 
-      <footer><div className="footer-brand"><span>HN</span><div><strong>Habib Nidal</strong><small>Software Developer / AI &amp; Automation</small></div></div><div className="footer-meta"><span>© 2026 Habib Nidal</span><span>Built with clarity &amp; intent</span><button onClick={() => setMotionOn(!motionOn)}>Motion: {motionOn ? 'On' : 'Reduced'}</button></div></footer>
+      <footer>
+        <div className="footer-brand">
+          <Image
+            src="/hn-icon.png"
+            alt="Habib Nidal logo"
+            width={34}
+            height={34}
+            className="brand-logo-img"
+          />
+          <div><strong>Habib Nidal</strong><small>Software Developer / AI &amp; Automation</small></div>
+        </div>
+        <div className="footer-meta"><span>© 2026 Habib Nidal</span><span>Built with clarity &amp; intent</span><button onClick={() => setMotionOn(!motionOn)}>Motion: {motionOn ? 'On' : 'Reduced'}</button></div>
+      </footer>
     </main>
   )
 }

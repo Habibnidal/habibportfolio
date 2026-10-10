@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Habib Nidal | Software Developer | AI & Automation',
   description: 'Habib Nidal builds practical software solutions, AI applications, business automations, and Zoho systems for modern teams.',
   keywords: ['Habib Nidal', 'Software Developer', 'AI Automation', 'Full Stack Developer', 'Zoho Developer', 'n8n Automation'],
-  generator: 'v0.app',
+  generator: 'Habib Nidal',
   openGraph: {
     title: 'Habib Nidal | Software Developer | AI & Automation',
     description: 'Building software, AI solutions & business automation.',
@@ -15,19 +15,27 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
+      {
         url: '/icon-light-32x32.png',
+        sizes: '32x32',
         media: '(prefers-color-scheme: light)',
       },
       {
         url: '/icon-dark-32x32.png',
+        sizes: '32x32',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon.png',
+        sizes: '512x512',
+        type: 'image/png',
       },
     ],
     apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
   },
 }
 
