@@ -284,14 +284,16 @@ export default function Home() {
       <div className="grain" aria-hidden="true" />
       <header className="nav-wrap">
         <a href="#top" className="brand" aria-label="Habib Nidal home">
-          <Image
-            src="/hn-icon.png"
-            alt="Habib Nidal logo"
-            width={34}
-            height={34}
-            className="brand-logo-img"
-            priority
-          />
+          <div className="brand-logo-wrap">
+            <Image
+              src="/logo.png"
+              alt="Habib Nidal logo"
+              width={52}
+              height={52}
+              className="brand-logo-img"
+              priority
+            />
+          </div>
           <strong>Habib Nidal</strong>
         </a>
         <nav className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
@@ -498,13 +500,15 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand">
-          <Image
-            src="/hn-icon.png"
-            alt="Habib Nidal logo"
-            width={34}
-            height={34}
-            className="brand-logo-img"
-          />
+          <div className="brand-logo-wrap">
+            <Image
+              src="/logo.png"
+              alt="Habib Nidal logo"
+              width={52}
+              height={52}
+              className="brand-logo-img"
+            />
+          </div>
           <div><strong>Habib Nidal</strong><small>Software Developer / AI &amp; Automation</small></div>
         </div>
         <div className="footer-meta"><span>© 2026 Habib Nidal</span><span>Built with clarity &amp; intent</span><button onClick={() => setMotionOn(!motionOn)}>Motion: {motionOn ? 'On' : 'Reduced'}</button></div>

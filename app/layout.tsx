@@ -3,14 +3,36 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://habibportfolio-five.vercel.app'),
   title: 'Habib Nidal | Software Developer | AI & Automation',
   description: 'Habib Nidal builds practical software solutions, AI applications, business automations, and Zoho systems for modern teams.',
   keywords: ['Habib Nidal', 'Software Developer', 'AI Automation', 'Full Stack Developer', 'Zoho Developer', 'n8n Automation'],
   generator: 'Habib Nidal',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Habib Nidal | Software Developer | AI & Automation',
-    description: 'Building software, AI solutions & business automation.',
+    description: 'Habib Nidal builds practical software solutions, AI applications, business automations, and Zoho systems for modern teams.',
+    url: 'https://habibportfolio-five.vercel.app',
+    siteName: 'Habib Nidal',
     type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Habib Nidal | Software Developer | AI & Automation',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Habib Nidal | Software Developer | AI & Automation',
+    description: 'Habib Nidal builds practical software solutions, AI applications, business automations, and Zoho systems for modern teams.',
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [
@@ -37,6 +59,7 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
     shortcut: '/favicon.ico',
   },
+  manifest: '/manifest.json',
 }
 
 export const viewport: Viewport = {

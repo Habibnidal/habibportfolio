@@ -1,0 +1,21 @@
+{
+  "name": "Habib Nidal | Software Developer | AI & Automation",
+  "short_name": "Habib Nidal",
+  "description": "Habib Nidal builds practical software solutions, AI applications, business automations, and Zoho systems for modern teams.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b2b2a",
+  "theme_color": "#0b2b2a",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
